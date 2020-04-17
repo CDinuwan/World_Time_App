@@ -19,7 +19,7 @@ class _LoadState extends State<Load> {
     'location':time.location,
     'flag':time.flag,
     'time':time.time, 
-    'isDayTime':time.isDayTime,
+    //'isDayTime':time.isDayTime,
   });
   }
   
