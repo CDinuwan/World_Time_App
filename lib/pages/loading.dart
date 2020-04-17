@@ -13,12 +13,13 @@ class _LoadState extends State<Load> {
 
   void setupWorldTime()async
   {
-    WorldTime time=WorldTime(location:'berlin',flag:'germany.png',url:'Europe/Berlin');
+    WorldTime time=WorldTime(location:'Berlin',flag:'germany.png',url:'Europe/Berlin');
     await time.getTime();
     Navigator.pushReplacementNamed(context,'/home',arguments: {
     'location':time.location,
     'flag':time.flag,
     'time':time.time, 
+    'isDayTime':time.isDayTime,
   });
   }
   

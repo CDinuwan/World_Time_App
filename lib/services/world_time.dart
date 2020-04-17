@@ -8,6 +8,7 @@ class WorldTime{
     String time;//Time of that location
     String flag;//url to an assert flag icon
     String url;//location url for api end point
+    bool isDayTime;//true or flase
 
 
     WorldTime({this.location,this.flag,this.url});
@@ -32,6 +33,7 @@ class WorldTime{
       now=now.add(Duration(hours:int.parse(offset)));
 
       //set time property
+      isDayTime=now.hour>6 && now.hour<20 ? true : false;
       time=DateFormat.jm().format(now);
       }
       catch(e)
