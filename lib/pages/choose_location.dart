@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:worldtime/services/world_time.dart';
 
-class chooseLocation extends StatefulWidget {
+class ChooseLocation extends StatefulWidget {
   @override
-  _chooseLocationState createState() => _chooseLocationState();
+  _ChooseLocationState createState() => _ChooseLocationState();
 }
 
-class _chooseLocationState extends State<chooseLocation> {
+class _ChooseLocationState extends State<ChooseLocation> {
 
   List<WorldTime> locations=[
     WorldTime(url:'Europe/London',location:'London',flag:'uk.png'),
@@ -47,7 +47,9 @@ class _chooseLocationState extends State<chooseLocation> {
               padding: const EdgeInsets.symmetric(vertical:1.0,horizontal:4.0),
               child: Card(
                 child:ListTile(
-                  onTap: (){},
+                  onTap: (){
+                    updateTime(index);
+                  },
                   title: Text(
                     locations[index].location
                   ),
