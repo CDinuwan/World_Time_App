@@ -26,6 +26,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
       'location':time.location,
       'flag':time.flag,
       'time':time.time,
+      'isDayTime':time.isDayTime,
     });
 
   }
@@ -51,11 +52,11 @@ class _ChooseLocationState extends State<ChooseLocation> {
                     updateTime(index);
                   },
                   title: Text(
-                    locations[index].location
+                    locations[index].location,
                   ),
-                  //leading: CircleAvatar(
-                    //backgroundImage:NetworkImage(),
-                  //),
+                  leading: CircleAvatar(
+                    backgroundImage:AssetImage('asserts/${locations[index].flag}'),
+                  ),
                 ),
               ),
             );
